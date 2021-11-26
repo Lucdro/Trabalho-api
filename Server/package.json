@@ -1,0 +1,24 @@
+{
+  "name": "trabalho-com-api",
+  "version": "1.0.0",
+  "description": "Trabalho para a aula de Programação de computadores, usando api para armazenar no banco de dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucdro/Trabalho-com-api.git"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucdro/Trabalho-com-api/issues"
+  },
+  "homepage": "https://github.com/Lucdro/Trabalho-com-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  }
+}
