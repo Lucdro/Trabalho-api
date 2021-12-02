@@ -48,20 +48,14 @@ padding-top: 20px;
 .task{
 font-size: 25px;
 display: flex;
-justify-content: space-between;
-padding: 30px;
-border-bottom: 1px solid rgb(230, 230, 230)
+border-bottom: 1px solid rgb(230, 230, 230);
+width: calc(100vh-20px);
 }
-.task:hover{
-background-color: #F8F8FF;
-border-left: 5px solid #585BDE;
-cursor: pointer;
+.taskInstruction{
+  padding: 30px;
 }
-.information{
-font-size: 20px;
-padding: 10px;
-background-color: silver;
-font-weight: bolder;
+.taskLocation{
+  padding: 30px;
 }
 .formulary{
   display: flex;
@@ -71,4 +65,44 @@ font-weight: bolder;
 .formulary input{
   padding:10px;
   margin:2px
+}
+.tasks{
+  display: flex;
+  justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+.delete{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 10%;
+  margin-left: 10px;
+}
+.update{
+  background-color: royalblue ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 10%;
+  margin-left: 2px;
+}
+.delete:hover{
+  background-color: rgb(221, 8, 8);
+  cursor: pointer;
+}
+.update:hover{
+  background-color: rgb(53, 87, 190);
+  cursor:pointer
 }

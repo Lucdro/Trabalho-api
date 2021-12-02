@@ -27,6 +27,18 @@ function App() {
     fetch(`http://localhost:3001/tasks/${e}`,{
       method:"DELETE"}).then(window.location.reload())
   }  
+  function updateTask(e){
+    fetch(`http://localhost:3001/tasks/${e}`,{
+      method:"PUT",
+      body:JSON.stringify({taskInstruction,taskLocation}),
+      headers : new Headers({
+        'Content-Type':'application/json',
+        'Accept':'application/json'
+      })
+    })
+    .then(settaskLocation(''),settaskInstruction(''))
+    .then(window.location.reload())
+  }
   return (
     <div className="flex-wrapper">
       <header>
@@ -38,14 +50,19 @@ function App() {
         <div onClick={addTask} className="add-task">+</div>
       </header>
       <main>
-        <div className="information">Clique para deletar</div>
         <ul className="task-list">
           {
             users.map(user=>{return(
-              <li onClick= {()=>deleteTask(user._id)} className="task" key={user._id} >
-                <div className="task-instruction" >{user.taskInstruction}</div>
-                <div className="task=location">{user.taskLocation}</div>
+             <div className="tasks">
+              <li className="task">
+                <div className="taskInstruction" >{user.taskInstruction}</div>
+                <div className="taskLocation">{user.taskLocation}</div>
               </li>
+              <div className="buttons">
+                <div onClick= {()=>deleteTask(user._id)} className="delete" key={user._id}>Deletar</div>
+                <div onClick={()=>updateTask(user._id)} className="update" key={user._id}>Atualizar</div>
+              </div>
+             </div>
             )
             })
           }
