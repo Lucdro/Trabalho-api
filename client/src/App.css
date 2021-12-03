@@ -44,18 +44,9 @@ font-weight: bold;
 margin-top: auto;
 margin-bottom: 10px;
 padding-top: 20px;
-}
-.task{
-font-size: 25px;
-display: flex;
-border-bottom: 1px solid rgb(230, 230, 230);
-justify-content: space-between;
-}
-.taskInstruction{
-  padding: 30px;
-}
-.taskLocation{
-  padding: 30px;
+position: fixed;
+bottom: 0;
+left: 50%;
 }
 .formulary{
   display: flex;
@@ -66,18 +57,35 @@ justify-content: space-between;
   padding:10px;
   margin:2px
 }
+.tasks{
+  display: flex;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+.task{
+padding:30px;
+font-size: 25px;
+display: flex;
+justify-content: space-between;
+}
+.taskInstruction{
+}
+.taskLocation{
+  position:absolute;
+  right: 20%;
+}
 .buttons{
   display: flex;
   flex-direction: row;
-  color: whitesmoke;
-  font-size: 16px;
-  border-bottom: 1px solid rgb(160, 160, 160);
+  position: absolute;
+  right: 0;
 }
 .delete{
   background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 15px;
   width: 70px;
   height: 70px;
   border-radius: 10%;
@@ -88,6 +96,8 @@ justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 15px;
   width: 70px;
   height: 70px;
   border-radius: 10%;
