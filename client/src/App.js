@@ -28,16 +28,28 @@ function App() {
       method:"DELETE"}).then(window.location.reload())
   }  
   function updateTask(e){
-    fetch(`http://localhost:3001/tasks/${e}`,{
+    if (taskInstruction !== ''){
+      fetch(`http://localhost:3001/tasks/${e}`,{
       method:"PUT",
-      body:JSON.stringify({taskInstruction,taskLocation}),
+      body:JSON.stringify({taskInstruction}),
       headers : new Headers({
         'Content-Type':'application/json',
         'Accept':'application/json'
       })
-    })
-    .then(settaskLocation(''),settaskInstruction(''))
+    }).then(settaskLocation(''),settaskInstruction(''))
     .then(window.location.reload())
+    }
+    if (taskLocation !==''){
+      fetch(`http://localhost:3001/tasks/${e}`,{
+      method:"PUT",
+      body:JSON.stringify({taskLocation}),
+      headers : new Headers({
+        'Content-Type':'application/json',
+        'Accept':'application/json'
+      })
+    }).then(settaskLocation(''),settaskInstruction(''))
+    .then(window.location.reload())
+    }
   }
   return (
     <div className="flex-wrapper">
