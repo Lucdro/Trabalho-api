@@ -67,8 +67,8 @@ function App() {
             users.map(user=>{return(
              <div className="tasks">
               <li className="task">
-                <div className="taskInstruction" >{user.taskInstruction}</div>
-                <div className="taskLocation">{user.taskLocation}</div>
+                <div className="taskInstruction" onClick={()=>settaskInstruction(user.taskInstruction)}>{user.taskInstruction}</div>
+                <div className="taskLocation"onClick={()=>settaskLocation(user.taskLocation)}>{user.taskLocation}</div>
               </li>
               <div className="buttons">
                 <div onClick= {()=>deleteTask(user._id)} className="delete" key={user._id}>Deletar</div>
