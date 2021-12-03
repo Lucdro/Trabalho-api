@@ -80,7 +80,7 @@ function App() {
           }
         </ul>
       </main>
-      <footer>Conclua as tarefas</footer>
+      <footer>O cliente sempre tem razão enquanto pagar</footer>
     </div>
   );
 }
